@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:controller="edu.umb.uas_pbo.DashboardController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="106.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="134.0" layoutY="9.0">
+               <image>
+                  <Image url="@../../../bikelogo.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="20.0" layoutY="78.0" prefHeight="0.0" prefWidth="114.0" text="Marc's Bike Shop" textAlignment="CENTER" textFill="#1b3263">
+               <font>
+                  <Font name="Script MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="189.0" layoutY="16.0" text="Dashboard">
+               <font>
+                  <Font name="Script MT Bold" size="53.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutButton" layoutX="508.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#loginPage" text="Log Out">
+               <font>
+                  <Font name="Sitka Text" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="51.0" layoutY="45.0" text="Data Management">
+               <font>
+                  <Font name="Sitka Text" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="clientsButton" layoutX="50.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#clientsPage" prefHeight="57.0" prefWidth="99.0" text="Clients">
+               <font>
+                  <Font name="Sitka Text" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="suppliersButton" layoutX="49.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#suppliersPage" prefHeight="62.0" prefWidth="101.0" text="Suppliers" />
+            <Button fx:id="mechanicsButton" layoutX="49.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#mechanicsPage" prefHeight="69.0" prefWidth="101.0" text="Mechanics" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="79.0" layoutY="50.0" text="Reports" />
+            <Button fx:id="printreportsButton" layoutX="50.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#reportsPage" prefHeight="57.0" prefWidth="99.0" text="Reports" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="63.0" layoutY="45.0" text="Transaction" />
+            <Button fx:id="servicesButton" layoutX="49.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#servicesPage" prefHeight="59.0" prefWidth="101.0" text="Services" />
+            <Button fx:id="ordersButton" layoutX="50.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#ordersPage" prefHeight="57.0" prefWidth="99.0" text="Orders" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

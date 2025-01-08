@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.umb.uas_pbo.SuppliersController">
+   <top>
+      <Pane prefHeight="105.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="102.0" prefWidth="600.0">
+               <children>
+                  <Pane prefHeight="106.0" prefWidth="600.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="134.0" layoutY="9.0">
+                           <image>
+                              <Image url="@../../../bikelogo.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="20.0" layoutY="78.0" prefHeight="0.0" prefWidth="114.0" text="Marc's Bike Shop" textAlignment="CENTER" textFill="#1b3263">
+                           <font>
+                              <Font name="Script MT Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="196.0" layoutY="20.0" text="Suppliers">
+                           <font>
+                              <Font name="Script MT Bold" size="53.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Accordion BorderPane.alignment="CENTER">
+         <panes>
+            <TitledPane fx:id="listSuppliers" animated="false" text="List Suppliers">
+               <content>
+                  <TableView fx:id="supplierTableView" prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn fx:id="suppliersID" prefWidth="109.99996693929006" text="ID" />
+                        <TableColumn fx:id="suppliersName" prefWidth="125.33329010009766" text="Name" />
+                        <TableColumn fx:id="suppliersContact" prefWidth="130.66661071777344" text="Contact" />
+                        <TableColumn fx:id="suppliersAddress" minWidth="0.0" prefWidth="144.0" text="Address" />
+                     </columns>
+                  </TableView>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Form Add &amp; Edit Suppliers">
+               <content>
+                  <Pane prefHeight="146.0" prefWidth="598.0">
+                     <children>
+                        <Label layoutX="36.0" layoutY="73.0" text="Name" />
+                        <Label layoutX="31.0" layoutY="115.0" text="Contact" />
+                        <Label layoutX="30.0" layoutY="158.0" text="Address" />
+                        <TextField fx:id="textfieldName" layoutX="108.0" layoutY="69.0" promptText="Name" />
+                        <TextField fx:id="textfieldContact" layoutX="108.0" layoutY="111.0" promptText="Contact" />
+                        <TextField fx:id="textfieldAddress" layoutX="108.0" layoutY="154.0" promptText="Address" />
+                        <Button fx:id="AddButton" layoutX="430.0" layoutY="30.0" mnemonicParsing="false" onAction="#Add" prefHeight="30.0" prefWidth="97.0" text="Add" />
+                        <Label layoutX="36.0" layoutY="36.0" text="ID" />
+                        <TextField fx:id="textfieldID" layoutX="108.0" layoutY="32.0" promptText="ID" />
+                        <Button fx:id="UpdateButton" layoutX="430.0" layoutY="75.0" mnemonicParsing="false" onAction="#Update" prefHeight="30.0" prefWidth="97.0" text="Update" />
+                        <Button fx:id="DeleteButton" layoutX="430.0" layoutY="117.0" mnemonicParsing="false" onAction="#Delete" prefHeight="30.0" prefWidth="97.0" text="Delete" />
+                        <Button fx:id="BackButton" layoutX="430.0" layoutY="160.0" mnemonicParsing="false" onAction="#Back" prefHeight="30.0" prefWidth="97.0" text="Back" />
+                     </children>
+                  </Pane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </center>
+</BorderPane>
